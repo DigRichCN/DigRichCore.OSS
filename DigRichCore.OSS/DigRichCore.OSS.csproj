@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Title>文件上传工具类</Title>
+    <Version>2.0.0</Version>
+    <Authors>DigRich</Authors>
+    <Company>www.digrich.cn</Company>
+    <Description>文件上传工具类、支持阿里云OSS，腾讯云OSS，本地</Description>
+    <PackageProjectUrl>https://github.com/DigRichCN/DigRichCore.OSS</PackageProjectUrl>
+    <PackageReadmeFile>DigRichCore.OSS.ReadMe.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/DigRichCN/DigRichCore.OSS</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +18,14 @@
     <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.3" />
     <PackageReference Include="Tencent.QCloud.Cos.Sdk" Version="5.4.34" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DigRichCore.OSS.ReadMe.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

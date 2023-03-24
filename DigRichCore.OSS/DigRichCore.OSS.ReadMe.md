@@ -25,3 +25,10 @@ services.AddAliyunOSS((x) => {
 services.AddLocalOSS(configuration.GetSection("LocalOSSConfig"));
 或
 services.AddLocalOSS(x => { x.ImageServerDomain = "yourdomain.com"; });
+
+
+上传图片案例：
+services.AddAliyunOSS(configuration.GetSection("AliyunOSSConfig"));
+
+var oss = services.BuildServiceProvider().GetRequiredService<IOSSProvider>();
+            var imgUrl = oss.CreateFileByUrl("http://www.haoyunshi.com/Uploads/Thumbnail/20220218164115.jpg", "/douyin/upload/" + Guid.NewGuid() + ".jpg");
